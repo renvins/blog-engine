@@ -1,0 +1,12 @@
+{{ define "content" }}
+<article>
+    <h1>{{ .Post.Title }}</h1>
+    <div class="date">{{ .Post.Date.Format "Jan 02, 2006" }}</div>
+    <hr>
+    <div>
+        {{ .Post.Content }}
+    </div>
+</article>
+<br>
+<a href="/"><< Back to Index</a>
+{{ end }}

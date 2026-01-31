@@ -1,0 +1,12 @@
+{{ define "content" }}
+<h1>Journal</h1>
+<ul>
+    {{ range .Posts }}
+    <li style="margin-bottom: 20px;">
+        <span class="date">{{ .Date.Format "2006-01-02" }}</span><br>
+        <a href="/post/{{ .Slug }}" style="font-size: 1.2em; font-weight: bold;">{{ .Title }}</a>
+        <p>{{ .Summary }}</p>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
